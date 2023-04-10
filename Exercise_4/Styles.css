@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+div {
+  background-color: rgb(255, 255,255);
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #344a72;
+}
+
+a:link {
+ color: blue;
+}
+
+
+#container {
+  margin: auto;
+  max-width:fit-content;
+  padding: 25px;
+}
+
+.form-wrap {
+  font-family:sans-serif;
+}
+
+.form-wrap h1,
+.form-wrap p {
+  align-items: center;
+}
+
+.form-wrap .form-group {
+  word-wrap: normal;
+}
+
+.form-wrap .form-group label {
+  display: block;
+  color: gray;
+  font-size: smaller;
+  
+}
+
+.form-wrap .form-group input {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 8px 20px;
+  margin: 5px 0;
+}
+
+.form-wrap button {
+  display:block;
+  width:auto;
+  height: auto;
+}
+
+button {
+  display:block;
+}
+
+.form-wrap button:hover {
+  background-color: #37a08e;
+}
+
+.form-wrap .bottom-text {
+  font-size: smaller;
+  line-height: 1.8;
+}
+
+.term-text {
+  width: 100%;
+  height: 280px;
+  text-align: left;
+}
+
+.address-text {
+  width: 100%;
+  height: 100px;
+  text-align: left;
+}
+
+.comments-text {
+  width: 100%;
+  height: 150px;
+  text-align: left;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 4px;
+  height: 70px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+canvas#signature-pad {
+  background: #fff;
+  width: 600px;
+  height: 100%;
+  cursor: crosshair;
+  border: 1px solid;
+}
+.required {
+  color:red;
+}
