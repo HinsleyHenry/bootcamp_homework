@@ -1,0 +1,30 @@
+hr.newLine {
+    border: 5px solid green;
+    border-radius: 5px;
+  }
+  div {
+    width: 400px;
+    border: 5px solid red;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  .section-box {
+    border: 1px solid #c4bc4c; 
+    padding: 10px;
+    width: 800px;
+    height: 100%; 
+
+  }
+  
+  .lifetime-input
+  {
+    border: 1px dotted #302813;
+    width: 170px;
+    text-align: center; 
+    
+  }
+  
+ 
+  
+  

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/exercise_5/Styles.css">
+    <title>Exercise 5</title>
+</head>
+
+<script>
+
+//Fourtune teller Code
+document.writeln("<h1>Fourtune teller</h1>");
+
+function tellFortune(numberOfChildren, partnerName, location, jobTitle) {
+  return("You will be a " +jobTitle +" in " +location +", and married to " +partnerName +", with " +numberOfChildren +" kids.<br>");
+}
+
+document.writeln(tellFortune("2", "Henry", "Maryland", "Tester"));
+document.writeln(tellFortune("2", "Christina", "clarksburg", "Developer"));
+document.writeln(tellFortune("3", "Ung", "silver sprimg", "Teacher"));
+
+console.log(tellFortune("2", "Henry", "Maryland", "Tester"));
+console.log(tellFortune("2", "Christina", "clarksburg", "developer"));
+console.log(tellFortune("3", "Ung", "Silver spring", "Teacher"));
+
+document.writeln("<hr class='newLine'>");
+
+document.writeln("<h1>Puppy Age Calculator</h1>");
+
+function calculateDogAge() {
+  var myAge= document.getElementById('years').value;
+  var dogAge = myAge * 7;
+ 
+  document.getElementById('age').innerHTML= dogAge + ' years old in human years.';
+}
+ 
+
+function calculateSupply(){
+  var myAge=document.getElementById('myAge').value;
+  var maxAge=90;
+  var cupsAmount= document.getElementById('mycoffee').value; 
+  var totalSupply=(cupsAmount * 365) * (maxAge - myAge); 
+  var result= document.getElementById('leftCups').value=totalSupply; 
+}
+
+//Geometrizer JS code
+
+function calcCircumfrence() {
+ var radius = document.getElementById('circumfrenceRadius');
+  var y = (Math.PI * radius.value) * 2;
+console.log("The circumfrence is " + y + ".");
+document.getElementById('circumfrence').innerHTML= y + ".";
+}
+
+
+function calcArea() {
+  var radius = document.getElementById('areaRadius');
+  var x = (Math.PI * radius.value) * radius.value;
+console.log("The area is " + x + ".");
+document.getElementById('area').innerHTML= x + ".";
+}
+
+</script>
+
+<body>
+    <!-- Puppy Age Calculator code --> 
+    <div class='section-box'> 
+        <p> My dog is:
+            <input type="text" id ="years" placeholder="years old"/>
+            <input type="button" value="Calculate in human years" onclick="calculateDogAge()"/>
+        </p> 
+        <p id='text'> My dog is: <span id="age"> </span></p>
+    </div>
+    <hr class='newLine'>
+
+    <!-- Life time supply code -->
+    <h1>Life time supply</h1>
+    <div class="section-box">
+    <strong> How many cups of coffee you will drink from now, till you die at the age of 90? </strong>
+    <p> I am  <input type="text" id="myAge" class="lifetime-input" placeholder="How old are you?" /> years old. </p>
+    <p> Every day I drink <input type='text' id="mycoffee" class="lifetime-input" placeholder="How many cups of coffee? "/> cups of coffee. </p>
+    <strong> LET ME CALCULATE IT FOR YOU! </strong>
+    <input type="button" id="myButton" value="CALCULATE" onclick="calculateSupply()" />
+    <p> You will need <input type="text" id="leftCups" class="lifetime-input"/> cups of coffee to last you until the ripe old age of 90. </p>
+    </div>
+    <hr class='newLine'>
+
+    <!--The Geometrizer code -->
+    <h1>Geometrizer</h1>
+    <div class="section-box">
+        
+        <input type="text" id ="circumfrenceRadius" placeholder="Enter radius" />
+        <input type="button" value="Calculate circumfrence" onclick="calcCircumfrence()"/>
+        <p id='text'> The Circumfrence is: <span id="circumfrence"> </span></p><br><br>
+        <input type ="text" id ="areaRadius" placeholder="Enter radius" />
+        <input type="button" value="Calculate Area" onclick="calcArea()"/>
+        <p id='text'> The Area is: <span id="area"> </span></p>
+        
+    </div>
+
+
+     <!--The Temperature Converter code -->
+    
+
+  
+  </body>
+   
+</html>
