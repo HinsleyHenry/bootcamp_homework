@@ -61,6 +61,23 @@ function calcArea() {
 console.log("The area is " + x + ".");
 document.getElementById('area').innerHTML= x + ".";
 }
+// Tempreture convertor code
+
+function celsiusToFahrenheit() {
+    var celsius = document.getElementById("celsius").value;
+    fahrenheit= (parseFloat(celsius) * 1.8) + 32;
+    console.log(fahrenheit);
+}
+function farenheitToCelsius() {
+    var fahrenheit = document.getElementById("fahrenheit").value;
+    celsius= (parseFloat(fahrenheit) - 32) / 1.8;
+    console.log(celsius);
+}
+
+
+   //document.getElementById('fahrenheit').value = parseFloat(fahrenheit).toFixed(1);
+   // document.getElementById('celsius').value = parseFloat(celsius).toFixed(1);
+
 
 </script>
 
@@ -99,11 +116,23 @@ document.getElementById('area').innerHTML= x + ".";
         <p id='text'> The Area is: <span id="area"> </span></p>
         
     </div>
+    <hr class='newLine'>
 
 
      <!--The Temperature Converter code -->
-    
 
+     <h1>Temperature Converter</h1>
+  <div  class="section-box">
+    
+     <input type="text" id="celsius" placeholder="Celsius" name="c" value="" />
+     <button id="convertFarenhiet" onclick="celsiusToFahrenheit()">Convert Fahrenheit</button><br><br>
+     
+     <input type="text" id="fahrenheit" placeholder="Fahrenheit" name="f" value="" />
+     <button id="convertCelsius" onclick="farenheitToCelsius()">Convert Celsius</button><br>
+     
+     
+     
+  </div>
   
   </body>
    
