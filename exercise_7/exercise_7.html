@@ -72,15 +72,34 @@ function checkPalindrome(str) {
 }
 
 
-// Simple intrest
+// Simple interest
 function simpleIn(P,R,I)
 {
   
     let SI = (P * I * R) / 100;
     
     document.getElementById("simpleInterest").innerHTML= SI;
+  
 }
+// Compound interest
+function compoundIn(p,t,r,n)
+{ 
+  let amount = p*(Math.pow(1+(r/n),(n*t)));
+  let CI = amount - p;
 
+  document.getElementById("compoundInterest").innerHTML= CI;
+  
+}
+// Random numbers
+/*function randomNumber(min, max) 
+{
+    return Math.random() * (max - min) + min;
+}
+  
+console.log("Random Number between 1 and 5: ")
+  
+// Function call
+console.log( randomNumber(1, 5) );*/
 
 </script>
 <body>
@@ -123,6 +142,7 @@ function simpleIn(P,R,I)
       <label>The value of P</label>
      <input type="text" value=""  id="PInput" placeholder="Enter value" /><br>
     </div>
+    
     <div>
       <label>The value of R</label>  
       <input type="text"  value="" id="RInput" placeholder="Enter value" /><br>
@@ -131,11 +151,35 @@ function simpleIn(P,R,I)
      <label>The value of I</label>
      <input type="text" value="" id="IInput" placeholder="Enter value"  /><br>
     </div>
-     <button onclick="simpleIn(document.getElementById('PInput').value,document.getElementById('RInput').value,document.getElementById('IInput').value)">Calculate</button><br><br>
+     <button onclick="simpleIn(document.getElementById('PInput').value,,document.getElementById('RInput').value),document.getElementById('IInput').value">Calculate</button><br><br>
      
      <p> The simple Interest is <span id="simpleInterest"></span></p>
      
      <hr>
+    <!--Compound interest-->
+    <h1>Compound Interest Interest</h1>
+     <div>
+      <label>The value of p</label>
+     <input type="text" value=""  id="pInput" placeholder="Enter value" /><br>
+    </div>
+    <div>
+      <label>The value of t</label>  
+      <input type="text"  value="" id="tInput" placeholder="Enter value" /><br>
+    </div>
+    <div>
+      <label>The value of r</label>  
+      <input type="text"  value="" id="rInput" placeholder="Enter value" /><br>
+    </div>
+    <div>
+     <label>The value of n</label>
+     <input type="text" value="" id="nInput" placeholder="Enter value"  /><br>
+    </div>
+  </div>
+  <button onclick="compoundIn(document.getElementById('pInput').value,document.getElementById('tInput').value,document.getElementById('rInput').value,document.getElementById('nInput').value)">Calculate</button><br><br>
+  
+  <p> The Compound Interest is <span id="compoundInterest"></span></p>
+  
+  <hr>
 
 
 </body>
