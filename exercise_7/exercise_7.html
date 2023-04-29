@@ -90,16 +90,37 @@ function compoundIn(p,t,r,n)
   document.getElementById("compoundInterest").innerHTML= CI;
   
 }
-// Random numbers
-/*function randomNumber(min, max) 
+
+
+//Random numbers
+function rand(max)
 {
-    return Math.random() * (max - min) + min;
+  let RN = Math.floor(Math.random() * max);  
+
+ document.getElementById("ranNum").innerHTML= RN;
 }
+
+//Factorial
+
+function factorialize(num) {
   
-console.log("Random Number between 1 and 5: ")
+   // If the number is less than 0, reject it.
+  if (num < 0)  return -1;
+    
+  // If the number is 0, its factorial is 1.
+  else if (num == 0) return 1;
+    
+  // Otherwise, call the recursive procedure again
+  else {
+      return (num * factorialize(num - 1));
+   }
   
-// Function call
-console.log( randomNumber(1, 5) );*/
+}
+
+function printFactorialNumber(a)
+{
+  document.getElementById("fNum").innerHTML= factorialize(a);
+}
 
 </script>
 <body>
@@ -151,7 +172,7 @@ console.log( randomNumber(1, 5) );*/
      <label>The value of I</label>
      <input type="text" value="" id="IInput" placeholder="Enter value"  /><br>
     </div>
-     <button onclick="simpleIn(document.getElementById('PInput').value,,document.getElementById('RInput').value),document.getElementById('IInput').value">Calculate</button><br><br>
+     <button onclick="simpleIn(document.getElementById('PInput').value,document.getElementById('RInput').value),document.getElementById('IInput').value">Calculate</button><br><br>
      
      <p> The simple Interest is <span id="simpleInterest"></span></p>
      
@@ -178,9 +199,29 @@ console.log( randomNumber(1, 5) );*/
   <button onclick="compoundIn(document.getElementById('pInput').value,document.getElementById('tInput').value,document.getElementById('rInput').value,document.getElementById('nInput').value)">Calculate</button><br><br>
   
   <p> The Compound Interest is <span id="compoundInterest"></span></p>
-  
   <hr>
 
+  <!--random number-->
+  <h1>Random number</h1>
+  <div>
+    <label>Enter the max value</label>
+    <input type="text" value="" id="maxInput"/><br>
+    <button onclick="rand(document.getElementById('maxInput').value)">Calculate</button><br><br>
+    <p> The random number is <span id ="ranNum"></span></p>
 
+  </div>
+  
+  <hr>
+<!--Factorial-->
+<h1>Factorial</h1>
+<div>
+  <label>Enter the value </label>
+  <input type="text" value="" id="numInput"/><br>
+  <button onclick="printFactorialNumber(document.getElementById('numInput').value)">Calculate</button><br><br>
+  <p> The factorial of the given number is <span id ="fNum"></span></p>
+
+</div>
+
+<hr>
 </body>
 </html>

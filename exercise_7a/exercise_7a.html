@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <h1>Array- loops</h1>
+
+    <h3>Given Array</h3>
+    <p id="N1"></p>
+    <h3>Remove Greg</h3>
+    <p id="N2"></p>
+
+    <h3>Remove James</h3>
+    <p id="N3"></p>
+    <h3>Add Matt</h3>
+    <p id="N4"></p>
+    <h3>Adding my name to array</h3>
+    <p id="N5"></p>
+
+<script>
+
+let people = ["Greg", "Mary", "Devon", "James"];
+
+// 1 log all people
+for(let i =0; i< people.length; i++)
+{
+   console.log(people[i]);
+}
+
+//Print the given array
+document.getElementById("N1").innerHTML = people;
+
+people.shift();
+document.getElementById("N2").innerHTML =people;
+
+people.pop();
+document.getElementById("N3").innerHTML =people;
+
+people.unshift("Matt");
+document.getElementById("N4").innerHTML =people;
+
+people.push("Christina");
+document.getElementById("N5").innerHTML =people;
+
+
+console.log("-------");
+for(let i =0; i< people.length; i++)
+{
+    
+    console.log(people[i]);
+    if (people[i]=="Mary") {break;}
+}
+
+
+</script>
+ 
+
+ 
